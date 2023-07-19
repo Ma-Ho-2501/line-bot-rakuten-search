@@ -1,0 +1,20 @@
+current directory: /Users/mari/portfolio/line-bot-shop/v/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+/Users/mari/.asdf/installs/ruby/3.2.2/bin/ruby extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/mari/portfolio/line-bot-shop/v/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230719-11587-7kqfay sitelibdir\=./.gem.20230719-11587-7kqfay clean
+
+current directory: /Users/mari/portfolio/line-bot-shop/v/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230719-11587-7kqfay sitelibdir\=./.gem.20230719-11587-7kqfay
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/mari/portfolio/line-bot-shop/v/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230719-11587-7kqfay sitelibdir\=./.gem.20230719-11587-7kqfay install
+/usr/local/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20230719-11587-7kqfay/racc
+
+current directory: /Users/mari/portfolio/line-bot-shop/v/ruby/3.2.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230719-11587-7kqfay sitelibdir\=./.gem.20230719-11587-7kqfay clean
