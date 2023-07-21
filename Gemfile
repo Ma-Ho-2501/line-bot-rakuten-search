@@ -71,4 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
+# LINE Message API
 gem 'line-bot-api'
+# LINEnoticeチャネルシークレット、チャネルアクセストークンの環境変数の管理 .env
+gem 'dotenv-rails'
