@@ -36,3 +36,5 @@
 
 # LINEの環境変数を格納
 /.env
+
+/ignere/test.rb
