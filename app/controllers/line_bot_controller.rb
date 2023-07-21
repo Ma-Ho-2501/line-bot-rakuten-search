@@ -11,21 +11,17 @@ class LineBotController < ApplicationController
         unless client.validate_signature(body, signature)
         return head :bad_request
       end
-
-      # LINEの送信メッセージのボディを配列に変換↓
       events = client.parse_events_from(body)
-      #送信されたメッセージがテキストメッセージかどうかの検証↓
       events.each do |event|
         case event
         when Line::Bot::Event::Message
           case event.type
-            when Line::Bot::Event::MessageType::Text
-              #返信メッセージ↓を作成
-              message = {
-                type: 'text',
-                text: event.message['text']
-              }
-              client.reply_message(event['replyToken'], message)
+          when Line::Bot::Event::MessageType::Text
+            message = {
+              type: 'text',
+              text: event.message['text']
+            }
+            client.reply_message(event['replyToken'], message)
           end
         end
       end
