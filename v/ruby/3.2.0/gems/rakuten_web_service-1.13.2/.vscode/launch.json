@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Local File",
+            "type": "rdbg",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "script": "${file}",
+            "useBundler": true,
+            "askParameters": true
+        },
+        {
+            "name": "Debug with RSpec - active spec line only",
+            "type": "rdbg",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "script": "${workspaceRoot}/bin/rspec",
+            "useBundler": true,
+            "args": [
+                "${file}:${lineNumber}"
+            ]
+        }
+    ]
+}

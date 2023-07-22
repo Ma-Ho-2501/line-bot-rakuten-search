@@ -75,3 +75,8 @@ end
 gem 'line-bot-api'
 # LINEnoticeチャネルシークレット、チャネルアクセストークンの環境変数の管理 .env
 gem 'dotenv-rails'
+
+gem 'httpclient'
+
+#楽天商品検索API
+gem 'rakuten_web_service'
