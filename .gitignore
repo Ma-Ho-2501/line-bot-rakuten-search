@@ -38,3 +38,5 @@
 /.env
 
 /ignere/test.rb
+
+/vendor
