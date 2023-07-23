@@ -79,7 +79,7 @@ class LineBotController < ApplicationController
         def make_reply_content(items)
           {
             "type": 'flex',
-            "altText": 'This is a Flex Message',
+            "altText": '楽天市場の商品検索ができるよ。「タオル 安い」などで検索！',
             "contents":
             {
               "type": 'carousel',
