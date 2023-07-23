@@ -57,15 +57,17 @@ class LineBotController < ApplicationController
         res = RakutenWebService::Ichiba::Item.search(keyword: input, hits: 5,formatVersion: 2,availability: 1,orFlag: 0)
         items = []
         items = res.map{|item| item}
-        
+        # make_reply_content(items)
+
+        #############################################################################
           text = ''
             items.each do |item|
             text <<
-              # item['mediumImageUrls'].first + "\n" +
+              item['mediumImageUrls'].first + "\n" +
               item['itemName'] + "\n" +
               item['itemPrice'].to_s+ '円'  + "\n" +
               item['itemUrl'] + "\n" +
-              item['itemCaption'] + "\n" +
+              # item['itemCaption'] + "\n" + #####7/23キャプションこの部分がエラー出る #####
               item['shopName'] + "\n" +
               "\n"
           end
@@ -75,7 +77,17 @@ class LineBotController < ApplicationController
           text: text
         }
 
+        #############################################################################
+
     end
+
+    # def make_reply_content(items)
+    #   {
+    #     type: 'flex',
+    #     altText: '楽天商品検索の結果です。',
+    #     contents:set_carousel(response['items'])
+    #   }
+    # end
 
     # def set_carousel(items)
     #   bubbles = []
@@ -152,14 +164,14 @@ class LineBotController < ApplicationController
     #             "text": item['shopName'],
     #             "margin": "none"
     #           },
-    #           {
-    #             "type": "text",
-    #             "text": item['itemCaption'],
-    #             "margin": "sm",
-    #             "size": "sm",
-    #             "wrap": true,
-    #             "maxLines": 4
-    #           }
+    #           # {
+    #           #   "type": "text",
+    #           #   "text": item['itemCaption'],
+    #           #   "margin": "sm",
+    #           #   "size": "sm",
+    #           #   "wrap": true,
+    #           #   "maxLines": 4
+    #           # }
     #         ],
     #         "margin": "md"
     #       }
